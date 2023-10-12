@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root{
+    --font-family: 'Poppins', sans-serif;
+
+    --primary-500: hsl(259, 100%, 65%);
+    --primary-300: hsl(0, 100%, 67%);
+
+    --neutral-900: hsl(0, 0%, 8%);
+    --neutral-600: hsl(0, 1%, 44%);
+    --neutral-400: hsl(0, 0%, 86%);
+    --neutral-200: hsl(0, 0%, 94%);
+    --neutral-100: hsl(0, 0%, 100%);
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-black: 800;
+
+    --font-xs: 1.125rem;
+    --font-sm: 1.25rem;
+    --font-lg: 1.5rem;
+    --font-xl: 1.75rem;
+    --font-xxl: 2rem;
+    --font-xxxl: 5rem;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+   max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+    /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  body{
+    font-family: var(--font-family);
+    color: var(--neutral-900);
+    background-color: var(--neutral-200);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+  }
+
+  .calc-container{
+    margin: auto;
+    width: 700px;
+    max-width: 100%;
+  }
+
+  .calc-main-box{
+    background-color: var(--neutral-100);
+    padding:2.5rem;
+    border-radius: 1.5rem 1.5rem 12.5rem 1.5rem;
+  }
+
+  .calc-header{
+    display: flex;
+  }
+
+  .calc-header div{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+  }
+
+  .calc-header label{
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    color: var(--neutral-600);
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    margin-bottom: 0.5rem;
+  }
+
+  .calc-header input{
+    width: 8rem;
+    outline: none;
+    border: 1px solid var(--neutral-400);
+    caret-color: var(--primary-500);
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    font-size: var(--font-xl);
+    font-weight: var(--fw-bold);
+    transition: none;
+  }
+
+  .calc-header input:hover{
+    cursor: pointer;
+
+  }
+
+  .calc-header input:focus-visible{
+    outline: 1px solid var(--primary-500);
+  }
+
+  .calc-error-text{
+    font-size: .725rem;
+    font-weight: var(--fw-regular);
+    color: var(--primary-300);
+    margin-top: .5rem;
+    font-style: italic;
+    display: block;
+  }
+
+
+  .calc-seperator{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .calc-seperator::before{
+    --height: 1px;
+    content: "";
+    position: absolute;
+    top: calc(50%-(var(--height)/2));
+    left: 0;
+    width: 100%;
+    height: var(--height);
+    background-color: var(--neutral-400);
+  }
+
+  .calc-seperator-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .calc-seperator-btn{
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-500);
+}
+
+.calc-seperator-btn:hover{
+  cursor: pointer;
+  background-color: var(--neutral-900);
+}
+
+.calc-result{
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  font-size: 5rem;
+  color: var(--neutral-900);
+  font-weight: var(--fw-black);
+}
+
+.clac-result-row{
+  display: flex;
+  line-height: .85;
+}
+
+.calc-result-number{
+  color: var(--primary-500);
+  margin: .5rem;
+}
+
+
+.attribution { 
+  margin-top: 1rem;
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 700px){
+  .calc-container{
+    width: 350px;
+  }
+
+  .calc-main-box{
+    padding: 3rem 1.5rem; 
+    border-radius: 1rem 1rem 5rem 1rem;
+  }
+
+  .calc-header div{
+    margin-right: 1rem;
+  }
+
+  .calc-header label{
+    font-size: .725rem;
+    margin-bottom: .25rem;
+  }
+
+  .calc-header input{
+    width: 5rem;
+    padding: .25rem .725rem;
+    font-size: var(--font-sm);
+  }
+  .calc-seperator{
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .calc-seperator img{
+    width: 20px;
+  }
+  .calc-result{
+    font-size: 3rem;
+    margin-top: 2.5rem;
+  }
+  .clac-result-row{
+    line-height: .75;
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+
+  <main class="calc-container">
+    <div class="calc-main-box">
+
+      <!-- Header Row -->
+
+      <div class="calc-header">
+        <div>
+          <label id="label-day">Day</label>
+          <input type="number" id="input-day" placeholder="DD">
+          <p class="calc-error-text" id="error-day"></p>
+        </div>
+        <div>
+          <label id="label-month">Month</label>
+          <input type="number" id="input-month" placeholder="MM">
+          <p class="calc-error-text" id="error-month"></p>
+        </div>
+        <div>
+          <label id="label-year">Year</label>
+          <input type="number" id="input-year" placeholder="YYYY">
+          <p class="calc-error-text" id="error-year"></p>
+        </div>
+      </div>
+
+      <!-- Seperator -->
+
+      <div class="calc-seperator">
+        <div class="calc-seperator-img">
+          <button class="calc-seperator-btn" id="result">
+            <img src="assets/images/icon-arrow.svg" alt="">
+          </button>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="calc-result">
+        <div class="clac-result-row">
+          <p class="calc-result-number" id="result-year">--</p>
+          <p>years</p>
+        </div>
+        <div class="clac-result-row">
+          <p class="calc-result-number" id="result-month">--</p>
+          <p>months</p>
+        </div>
+        <div class="clac-result-row">
+          <p class="calc-result-number" id="result-day">--</p>
+          <p>days</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/alanpramil7">Alan Pramil</a>.
+    </footer>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
