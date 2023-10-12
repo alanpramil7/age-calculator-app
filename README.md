@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [HERE](https://www.frontendmentor.io/solutions/agecalculatorapp-YYA91vrEX1)
-- Live Site URL: [HERE](https://app.netlify.com/sites/alan-pramil-age-calculator-app/deploys/652861f911e724147ec4a7cb)
+- Live Site URL: [HERE](https://main--alan-pramil-age-calculator-app.netlify.app/)
 
 ## My process
 
